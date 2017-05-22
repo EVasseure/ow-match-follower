@@ -35,7 +35,7 @@ app.on('ready', () => {
     })
 
     // Tell the popup window to load our index.html file
-    window.loadURL(`file://${path.join(__dirname, 'index.html')}`)
+    window.loadURL(`file://${path.join(__dirname, 'src/index.html')}`)
 
     // Only close the window on blur if dev tools isn't opened
     window.on('blur', () => {
