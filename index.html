@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Sample Menubar App</title>
+        <script>require('electron-connect').client.create();</script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Overwatch matches</h1>
+        <p id="quit-btn" class="quit-btn">Quit</p>
+        <table>
+            <thead>
+                <th>Match</th>
+                <th>In</th>
+            </thead>
+            <tbody class="content"></tbody>
+        </table>
+        <script charset="utf-8">require('./index.js')</script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    font-family: Helvetica Neue,Arial,Helvetica;
+}
+
+h1 {
+    text-align: center;
+    font-size: 21px;
+    color: #333;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+th {
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 10px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    height: 32px;
+    font-weight: 300;
+}
+
+.team {
+    font-weight: 400;
+}
+
+.quit-btn {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    cursor: pointer;
+}

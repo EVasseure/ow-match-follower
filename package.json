@@ -1,0 +1,19 @@
+{
+  "name": "ow-match",
+  "productName": "ow-match",
+  "version": "1.0.0",
+  "devDependencies": {
+    "electron-connect": "^0.6.1",
+    "electron-packager": "^8.7.0",
+    "electron-prebuilt": "^1.4.1"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "gulp": "^3.9.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "electron-packager ."
+  }
+}
