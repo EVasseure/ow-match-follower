@@ -27,7 +27,7 @@ gulp.task('serve', function () {
     gulp.watch('app.js', electron.restart);
 
     // Reload renderer process
-    gulp.watch(['index.js', 'index.html', 'style.css'], electron.reload);
+    gulp.watch(['src/index.js', 'src/index.html', 'src/style.css'], electron.reload);
 });
 
 gulp.task('reload:browser', function () {

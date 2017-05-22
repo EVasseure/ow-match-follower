@@ -1,6 +1,6 @@
 {
-  "name": "ow-match",
-  "productName": "ow-match",
+  "name": "overwatch_watcher",
+  "productName": "Overwatch-Watcher",
   "version": "1.0.0",
   "devDependencies": {
     "electron-connect": "^0.6.1",

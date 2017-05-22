@@ -10,13 +10,15 @@ function getData() {
         dataEl.innerHTML = response.data;
         var matches = dataEl.getElementsByClassName('simple matches')[0].getElementsByClassName('match');
         var dates = dataEl.getElementsByClassName('simple matches')[0].getElementsByClassName('live-in');
+        var icons = dataEl.getElementsByClassName('simple matches')[0].getElementsByClassName('tournament-icon');
         var content = "";
         for (var i = 0; i < matches.length; i++) {
             var link = "http://www.gosugamers.net" + matches[i].getAttribute("href");
+            var icon = "http://www.gosugamers.net" + icons[i].childNodes[1].getAttribute("src");
             var opps = matches[i].getElementsByClassName('opp');
             var players = '<span class="team">' + opps[0].innerText.replace(/\s+/g, ' ').trim() + '</span> vs <span class="team">' + opps[1].innerText.replace(/\s+/g, ' ').trim() + '</span>';
             var time = dates[i].innerText.replace(/\s+/g, ' ').trim();
-            content += "<tr><td>" + players + "</td><td>" + time + "</td></tr>";
+            content += "<tr><td>" + players + "</td><td>" + time + "</td><td><img src=\"" + icon + "\"></td></tr>";
         }
         document.getElementsByClassName("content")[0].innerHTML = content;
 

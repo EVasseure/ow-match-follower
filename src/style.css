@@ -37,3 +37,7 @@ td {
     top: 0px;
     cursor: pointer;
 }
+
+img {
+    max-width: 60px;
+}
