@@ -41,7 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     getData();
     document.getElementById("quit-btn").addEventListener("click", function (e) {
-        console.log("TOTOTO")
         ipcRenderer.send('quit')
+    });
+    document.getElementById("gosu-link").addEventListener("click", function (e) {
+        e.preventDefault();
+        shell.openExternal("http://www.gosugamers.net/overwatch/gosubet");
     });
 })

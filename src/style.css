@@ -1,5 +1,6 @@
 body {
     font-family: Helvetica Neue,Arial,Helvetica;
+    padding: 15px;
 }
 
 h1 {
@@ -13,7 +14,6 @@ table {
     width: 100%;
     text-align: left;
     margin-top: 15px;
-    padding: 10px;
 }
 
 th {
@@ -40,4 +40,16 @@ td {
 
 img {
     max-width: 60px;
+}
+
+.bottom-link {
+    text-align: right;
+}
+
+.bottom-link a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    cursor: pointer;
 }
