@@ -7,10 +7,7 @@ const assetsDir = path.join(__dirname, 'assets')
 let tray = undefined
 let window = undefined
 
-// This method is called once Electron is ready to run our code
-// It is effectively the main method of our Electron app
 app.on('ready', () => {
-    // Setup the menubar with an icon
     let icon = nativeImage.createFromDataURL(base64Icon)
     tray = new Tray(icon)
 
@@ -22,28 +19,27 @@ app.on('ready', () => {
         resizable: false,
     })
 
-    // Add a click handler so that when the user clicks on the menubar icon, it shows
-    // our popup window
     tray.on('click', function(event) {
         toggleWindow();
         window.webContents.send('window-opened')
-
-        // Show devtools when command clicked
-        // if (window.isVisible() && process.defaultApp && event.metaKey) {
-        //     window.openDevTools({mode: 'detach'})
-        // }
     })
 
-    // Tell the popup window to load our index.html file
     window.loadURL(`file://${path.join(__dirname, 'src/index.html')}`)
 
-    // Only close the window on blur if dev tools isn't opened
     window.on('blur', () => {
         if(!window.webContents.isDevToolsOpened()) {
             window.hide()
         }
     })
+
+    setInterval(getData(window), 1200000); // 20 min
 })
+
+function getData(window) {
+    return function() {
+        window.webContents.send('get-data');
+    }
+}
 
 const toggleWindow = () => {
     if (window.isVisible()) {
@@ -80,8 +76,6 @@ ipcMain.on('quit', () => {
 })
 
 app.on('window-all-closed', () => {
-    // On macOS it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
     app.quit()
 })
 
