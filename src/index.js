@@ -8,9 +8,11 @@ function getData() {
     .then(function (response) {
         var dataEl = document.createElement('html');
         dataEl.innerHTML = response.data;
-        var matches = dataEl.getElementsByClassName('simple matches')[0].getElementsByClassName('match');
-        var dates = dataEl.getElementsByClassName('simple matches')[0].getElementsByClassName('live-in');
-        var icons = dataEl.getElementsByClassName('simple matches')[0].getElementsByClassName('tournament-icon');
+        var matchesList = dataEl.getElementsByClassName('simple matches')
+        matchesList = matchesList.length === 2 ? dataEl.getElementsByClassName('simple matches')[0] : dataEl.getElementsByClassName('simple matches')[1]
+        var matches = matchesList.getElementsByClassName('match');
+        var dates = matchesList.getElementsByClassName('live-in');
+        var icons = matchesList.getElementsByClassName('tournament-icon');
         var content = "";
         for (var i = 0; i < matches.length; i++) {
             var link = "http://www.gosugamers.net" + matches[i].getAttribute("href");
