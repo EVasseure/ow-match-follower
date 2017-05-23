@@ -8,6 +8,8 @@ class Match {
     }
 
     getParsedTimetime(time) {
+        if (time === undefined)
+            return NaN; // live matches don't have a time
         let times = time.split(" ");
         if (times[0][times[0].length - 1] !== "m")
             return NaN; // returning NaN for time more than an hour since it's not interisting

@@ -1,6 +1,7 @@
 body {
     font-family: Helvetica Neue,Arial,Helvetica;
     padding: 15px;
+    background-color: #f6f9fc;
 }
 
 h1 {
@@ -52,4 +53,34 @@ img {
     font-weight: 300;
     font-size: 15px;
     cursor: pointer;
+}
+
+.category-title {
+    font-size: 20px;
+    color: #585858;
+}
+
+.hidden {
+    display: none;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.no-matches {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.category {
+    border: 1px #E1E1E1 solid;
+    padding: 0px 25px 10px 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px 1px rgba(0,0,0,.08), 0 5px 14px 1px rgba(50,50,93,.1);
+    background-color: #FFF;
 }

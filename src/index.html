@@ -7,14 +7,28 @@
     <body>
         <h1>Overwatch matches</h1>
         <p id="quit-btn" class="quit-btn">Quit</p>
-        <table>
-            <thead>
-                <th>Match</th>
-                <th>In</th>
-                <th>Event</th>
-            </thead>
-            <tbody class="content"></tbody>
-        </table>
+        <div class="category">
+            <p class="category-title">Live matches</p>
+            <p id="no-matches" class="no-matches">No matches currently live.</p>
+            <table id="current-matches">
+                <thead>
+                    <th>Match</th>
+                    <th>Event</th>
+                </thead>
+                <tbody class="current-content"></tbody>
+            </table>
+        </div>
+        <div class="category">
+            <p class="category-title">Incoming matches</p>
+            <table id="incoming-matches">
+                <thead>
+                    <th>Match</th>
+                    <th>In</th>
+                    <th>Event</th>
+                </thead>
+                <tbody class="incoming-content"></tbody>
+            </table>
+        </div>
         <p class="bottom-link"><a id="gosu-link">data taken from www.gosugamers.net</a></p>
         <script charset="utf-8">require('./index.js')</script>
     </body>
