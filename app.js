@@ -17,6 +17,7 @@ app.on('ready', () => {
         show: false,
         frame: false,
         resizable: false,
+        icon: path.join(__dirname, '/assets/ow-logo.png')
     })
 
     tray.on('click', function(event) {
