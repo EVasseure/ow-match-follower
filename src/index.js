@@ -78,6 +78,9 @@ function getData() {
         displayData(currentMatches, incomingMatches);
         checkTimes(incomingMatches);
     })
+    .catch(function (error) {
+        throw error;
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
